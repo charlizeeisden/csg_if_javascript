@@ -14,7 +14,7 @@ function setup() {
 function draw() {
   tekenAchtergrond();
 
-  
+  for(var huisnummers = 0; huisnummers < huisNummers.length;huisnummers++)
     tekenHuis(kleur,13);
     translate(150,0);
 

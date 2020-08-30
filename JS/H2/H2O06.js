@@ -22,10 +22,19 @@ function draw() {
   background(brug);
   tekenRaster();
 
+ }
   if (keyIsDown(RIGHT_ARROW)) {
     xJos += celGrootte;
   }
-  
+  if (keyIsDown(LEFT_ARROW)) {
+    xJos -= celGrootte;
+ 
+  if (keyIsDown(UP_ARROW)) {
+    yJos -= celGrootte;
+  }
+  if (keyIsDown(DOWN_ARROW)) {
+    yJos += celGrootte;
+  }
   xJos = constrain(xJos,0,width - celGrootte);
   
   image(spriteJos,xJos,yJos);

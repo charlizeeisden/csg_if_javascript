@@ -15,24 +15,22 @@ function setup() {
   canvas = createCanvas(901,601);
   canvas.parent('processing');
   celGrootte = width / aantalKolommenRaster;
+  
 }
 
 function draw() {
-  
+  background(brug);
   tekenRaster();
+  Image(spriteJos,xJos,yJos);
 }
 
 function tekenRaster() {
   push();
   noFill();
   stroke('grey');
-  /*
-  Maak hieronder een dubbele herhaling om een raster te maken.
-  HINT: je kunt terugkijken naar het raster dat je in H1 hebt gemaakt.
-  Maak gebruik van de variabelen die bovenaan zijn gedeclareerd.
-  */
-  
+  for (var rij = 0; rij < aantalRijenRaster; rij++) {
+       for (var kolom = 0; kolom < aantalKolommenRaster; kolom++)
       rect(4*celGrootte,2*celGrootte,celGrootte,celGrootte);
-
+  }
   pop();
 }
