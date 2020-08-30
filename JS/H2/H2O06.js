@@ -48,6 +48,7 @@ function tekenRaster() {
     for (var kolom = 0;kolom < aantalKolommenRaster;kolom++) {
       rect(kolom*celGrootte,rij*celGrootte,celGrootte,celGrootte);
     }
+    
   }
   pop();
 }

@@ -23,8 +23,7 @@ function draw() {
     else {
       kleur = 'lightgray';
     }    
-  }
-  
+  } 
 }
 
 function tekenHuis(kleur,nr,naam) {
