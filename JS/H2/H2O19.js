@@ -1,3 +1,10 @@
+
+var raster{
+    aantalRijenRaster = 6,
+    aantalKolommenRaster = 6,
+    celGrootte = null,
+    berekenCelGrootte()
+}
 var aantalRijenRaster = 6;
 var aantalKolommenRaster = 9;
 var celGrootte;
@@ -22,6 +29,9 @@ function setup() {
   canvas.parent('processing');
   frameRate(10);
   celGrootte = width / aantalKolommenRaster;
+  berekenCelGrootte () {
+      this.celgrootte = width/this.aantalKolommen;
+  }
 }
 
 function draw() {

@@ -1,14 +1,38 @@
-function preload() {
-pl = loadImage("../images/sprites/kever.png");
+var bol = {
+x: 225,
+y: 225,
+diameter: 100,
+
+beweeg() {
+        if (keyIsDown(LEFT_ARROW)) {
+        this.x--;
+        }
+        if (keyIsDown(RIGHT_ARROW)) {
+        this.x++;
+        }
+        if (keyIsDown(UP_ARROW)) {
+        this.y--;
+        }
+        if (keyIsDown(DOWN_ARROW)) {
+        this.y++;
+        } 
+    },
+    teken() {
+        fill('red');
+        noStroke();
+        ellipse(this.x,this.y,this.diameter);
+    }
 }
+
+
 function setup() {
-  canvas = createCanvas(450,450);
-  background('silver');
-  textSize(30);
-  canvas.parent('processing');
+  canvas = createCanvas(450,450,);
+ 
 }
  
 function draw() {
-  image(pl,0,45,50,50);
-  text("breedte= "+pl.width,150,40);
+ background('blue');
+ bol.teken();
+ bol.beweeg();
 }
+ 

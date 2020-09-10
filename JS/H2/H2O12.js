@@ -18,7 +18,7 @@ function setup() {
 
 function draw() {
   background('lavender');
-  background('white');
+  background('red');
   image(animatie[nummer],0,0);
   
   // straal van de neus is 180

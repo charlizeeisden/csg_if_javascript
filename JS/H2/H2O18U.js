@@ -45,6 +45,5 @@ function setup() {
 function draw() {
   background('lavender');
   jos.teken(mouseX,mouseY);
-  
   text(jos.naam + " wordt getekend met schaal = " + jos.schaal + " op x-positie (middelpunt neus) " + jos.x + ".",20,20);
 }

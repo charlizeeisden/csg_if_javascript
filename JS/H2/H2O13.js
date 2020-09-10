@@ -12,8 +12,8 @@ var yJos = 300;
 
 function preload() {
   brug = loadImage("images/backgrounds/dame_op_brug_1800.jpg");
-  for(var b = 0; < aantalBeeldjes;b++)  {
-    frame = loadImage("images/sprites/Jos100px/Jos_0.png"); 
+  for (var b = 0;b < aantalBeeldjes;b++) {
+    frame = loadImage("images/sprites/Jos100px/Jos_" + b + ".png");
     animatie.push(frame);
   }
 }
@@ -35,21 +35,21 @@ function draw() {
   }
   if (keyIsDown(RIGHT_ARROW)) {
     xJos += celGrootte;
-      nummer = 1;
+    nummer = 1;
   }
   if (keyIsDown(UP_ARROW)) {
-    yJos-=celGrootte;
-      nummer = 4;
+    yJos -= celGrootte;
+    nummer = 4;
   }
   if (keyIsDown(DOWN_ARROW)) {
     yJos += celGrootte;
-      nummer = 5;
+    nummer = 5;
   }
   
   xJos = constrain(xJos,0,width - celGrootte);
   yJos = constrain(yJos,0,height - celGrootte);
   
-  image(animatie[nummer](frame,0,5*xJos,0,5*yJos);
+  image(animatie[nummer],xJos,yJos,celGrootte,celGrootte);
 }
 
 function tekenRaster() {
