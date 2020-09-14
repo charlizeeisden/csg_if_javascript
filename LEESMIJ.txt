@@ -14,8 +14,8 @@ Als je tevreden bent of aan het eind van het les zit, verplaats je een nieuwe ve
 3) de wijzigingen te pushen (onder ... Push)
 
 De standaard preview is handig, maar fullscreen is vaak fijner. Typ daarvoor in de console:
-
-python3 -m http.server 3000 &
+python3 -m http.server 3000
+ &
 (en druk op enter)
 
 Na korte tijd verschijnt een blauw menuutje: kies daar voor "Open Browser".
