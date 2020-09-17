@@ -19,9 +19,7 @@ function draw() {
     background('white');
   }
   
-  mouseX=constrain(mouseX,25,width - 25);
-  mouseY=constrain(mouseY,25,height - 25);
-  afstand=dist(width / 2,height / 2,mouseX,mouseY);
+
   fill('black');  
   text("Beweeg de muis | x = " + round(mouseX) + " en y = " + round(mouseY) + " afstand = " + round(afstand),10,20);
   

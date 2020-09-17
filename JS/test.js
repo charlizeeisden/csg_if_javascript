@@ -28,20 +28,26 @@ var eiland = {
 x: 450,
 y: 450,
 diameter: 100,
-kleur: ('yellow'),
+kleur: 'yellow',
     teken() {
         
         noStroke();
+        fill(this.kleur); 
         ellipse(this.x,this.y,this.diameter);
-    }
-}
+    },
+
 
 wordtBezocht(bezoeker) {
-    if (bezoeker.x > 20){
+    if (dist(this.x,this.y,bezoeker.x,bezoeker.y) <= (this.diameter + bezoeker.diameter)/2){
         this.kleur = 'pink';
     }
-}
+    else {
+        this.kleur='yellow';
+    }
+ 
 
+}
+}
 function setup() {
   canvas = createCanvas(450,450,);
  
@@ -50,8 +56,9 @@ function setup() {
 function draw() {
  background('blue');
  bol.teken();
- //eiland.wordtBezocht(bol);
+ eiland.wordtBezocht(bol);
  eiland.teken();
  bol.beweeg();
+ 
 }
  
