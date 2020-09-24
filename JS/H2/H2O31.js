@@ -1,12 +1,14 @@
-var dobbelSteen = {
-  x: 25,
-  y: 25,
-  grootte: 200,
-  diameterOgen: 50,
-  ogen: null,
-  R: null,
-  G: null,
-  B: null,
+class dobbelSteen {
+constructor(x){
+  this.x = 25,
+  this.y = 25,
+  this.grootte = 200,
+  this.diameterOgen = 50,
+  this.ogen = null,
+  this.R = null,
+  this.G = null,
+  this.B = null,
+},
 
   gooi() {
     this.ogen = floor(random(0,6)) + 1;

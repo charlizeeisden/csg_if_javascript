@@ -45,8 +45,17 @@ var jos = {
       this.frameNummer = 5;
     }
     
-    this.x = constrain(this.x,0,canvas.width-raster.celGrootte);
+    this.x = constrain(this.x,0,canvas.width);
     this.y = constrain(this.y,0,canvas.height-raster.celGrootte);
+  },
+
+  gehaald() {
+   if (this.x >= canvas.width){
+    return true; 
+   }  
+   else{
+    return false;
+   }
   },
   
   wordtGeraakt(vijand) {
@@ -57,7 +66,7 @@ var jos = {
       return false;
     }
   },
-  
+
   toon() {
     image(this.animatie[this.frameNummer],this.x,this.y,raster.celGrootte,raster.celGrootte);
   }
@@ -111,5 +120,11 @@ function draw() {
   alice.toon();
   if (jos.wordtGeraakt(alice)) {
     noLoop();
+  }
+  if (jos.gehaald()) {
+    background('green');
+    fill('white');
+    text("je hebt gewonnen!",400,300);
+    noloop();
   }
 }

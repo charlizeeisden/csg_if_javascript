@@ -50,7 +50,11 @@ var jos = {
   },
 
   wordtGeraakt(vijand) {
-    return false;
+   if (vijand.x == this.x && vijand.y == this.y) {
+       return true;
+  }
+  else {
+      return false;}
   },
 
   toon() {
@@ -101,6 +105,7 @@ function draw() {
   background(brug);
   raster.teken();
   jos.beweeg();
+  alice.beweeg();
   jos.toon();
   alice.toon();
 

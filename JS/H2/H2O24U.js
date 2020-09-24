@@ -55,5 +55,5 @@ function draw() {
   if (dobbelSteen.totaal > 0) {
     dobbelSteen.teken();
   }
-  text("totaal: "+dobbelSteen.totaal,0,canvas.height / 2,canvas.width,canvas.height / 2);
+  // text("totaal: "+dobbelSteen.totaal,0,canvas.height / 2,canvas.width,canvas.height / 2);
 }
