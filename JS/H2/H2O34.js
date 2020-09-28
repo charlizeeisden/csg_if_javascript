@@ -137,11 +137,17 @@ function draw() {
   if (eve.wordtGeraakt(alice) || eve.wordtGeraakt(bob)) {
     noLoop();
   }
-  
+
+  if (alice.x==bob.x && alice==bob.y) {
+bob.beweeg();
+  }
+
   if (eve.gehaald) {
     background('green');
     fill('white');
     text("Je hebt gewonnen!",30,300);
     noLoop();
   }
+
+  
 }
