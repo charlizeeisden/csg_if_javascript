@@ -78,7 +78,10 @@ function setup() {
   frameRate(10);
   textFont("Verdana");
   textSize(90);
-  
+  for(var b = 0; b<10; b++){
+  bommenArray.push(new Bom());
+  }
+}
   raster = new Raster(6,9);
   
   raster.berekenCelGrootte();
@@ -117,10 +120,12 @@ function draw() {
   if (alice.x == bob.x && alice == bob.y) {
     bob.beweeg();
   }
-  
+    for(var b=0; b<bommenArray.length;b++){
+      bommenArray[n].toon();
   eve.toon();
   alice.toon();
   bob.toon();
+    }
   
   if (eve.wordtGeraakt(alice) || eve.wordtGeraakt(bob) || eve.staatOp(bommenArray)) {
     background('red');

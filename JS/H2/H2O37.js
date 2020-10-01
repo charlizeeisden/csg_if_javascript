@@ -35,11 +35,17 @@ function setup() {
   colorMode(RGB,255,255,255,1);
   background(0,0,75,1);
   noStroke();
-  k1 = new Knikker();
+ for (var b = 0; b <10; b++) {
+        knikkerVerzameling.push(new Knikker()) ;
+    }
+
 }
 
 function draw() {
   background(0,0,75,0.2);
-  k1.beweeg();
-  k1.teken();
+  
+  for(var n=0; n<knikkerVerzameling.length;n++){
+      knikkerVerzameling[n].teken();
+       knikkerVerzameling[n].beweeg();
+  }
 }
